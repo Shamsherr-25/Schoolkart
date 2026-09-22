@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Select School - SchoolKart</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="header"><div class="container nav"><a href="index.html" class="logo">🎒 SchoolKart</a><button class="menu-btn" onclick="toggleMenu()">☰</button><nav id="mainNav"><a href="index.html">Home</a><a href="schools.html" class="active">Schools</a><a href="products.html">Products</a><a href="cart.html">Cart <span class="cart-count">0</span></a><a href="login.html" class="login-link">Login</a></nav></div></header>
+<main>
+<section class="page-header"><div class="container"><span>STEP 1</span><h1>Select Your School</h1><p>Choose your child's school to see the required products.</p></div></section>
+<section class="school-section section"><div class="container">
+<div class="search-box"><span>🔍</span><input type="text" id="schoolSearch" placeholder="Search your school..." onkeyup="searchSchools()"></div>
+<div class="school-grid" id="schoolGrid">
+<div class="school-card" data-school="Delhi Public School" onclick="selectSchool('Delhi Public School')"><div class="school-logo">🏫</div><h3>Delhi Public School</h3><p>Delhi Public School</p><button class="small-btn">Select School →</button></div>
+<div class="school-card" data-school="St. Xavier's School" onclick="selectSchool('St. Xavier’s School')"><div class="school-logo">🎓</div><h3>St. Xavier's School</h3><p>St. Xavier's School</p><button class="small-btn">Select School →</button></div>
+<div class="school-card" data-school="DAV Public School" onclick="selectSchool('DAV Public School')"><div class="school-logo">📘</div><h3>DAV Public School</h3><p>DAV Public School</p><button class="small-btn">Select School →</button></div>
+<div class="school-card" data-school="Army Public School" onclick="selectSchool('Army Public School')"><div class="school-logo">⭐</div><h3>Army Public School</h3><p>Army Public School</p><button class="small-btn">Select School →</button></div>
+<div class="school-card" data-school="Don Bosco School" onclick="selectSchool('Don Bosco School')"><div class="school-logo">🏛️</div><h3>Don Bosco School</h3><p>Don Bosco School</p><button class="small-btn">Select School →</button></div>
+<div class="school-card" data-school="St. Mary's School" onclick="selectSchool('St. Mary’s School')"><div class="school-logo">🏫</div><h3>St. Mary's School</h3><p>St. Mary's School</p><button class="small-btn">Select School →</button></div>
+</div>
+<div id="noSchools" class="empty-state hidden"><div>🔎</div><h3>No school found</h3><p>Try searching with another school name.</p></div>
+</div></section>
+</main>
+<footer class="footer"><div class="copyright">© 2026 SchoolKart. All Rights Reserved.</div></footer>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Select Class - SchoolKart</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="header"><div class="container nav"><a href="index.html" class="logo">🎒 SchoolKart</a><button class="menu-btn" onclick="toggleMenu()">☰</button><nav id="mainNav"><a href="index.html">Home</a><a href="schools.html">Schools</a><a href="products.html">Products</a><a href="cart.html">Cart <span class="cart-count">0</span></a><a href="login.html" class="login-link">Login</a></nav></div></header>
+<main>
+<section class="page-header"><div class="container"><span>STEP 2</span><h1>Select Your Class</h1><p id="selectedSchoolText">Choose the class for your child.</p></div></section>
+<section class="class-section section"><div class="container">
+<div class="selected-school"><div class="school-logo">🏫</div><div><small>Selected School</small><h3 id="schoolName">School</h3></div><a href="schools.html" class="change-link">Change</a></div>
+<div class="section-title left-title"><span>CHOOSE CLASS</span><h2>Select your child's class</h2></div>
+<div class="class-grid">
+<button onclick="selectClass('Nursery')"><span>🧸</span>Nursery</button><button onclick="selectClass('LKG')"><span>🎨</span>LKG</button><button onclick="selectClass('UKG')"><span>✏️</span>UKG</button>
+<button onclick="selectClass('Class 1')"><span>1️⃣</span>Class 1</button><button onclick="selectClass('Class 2')"><span>2️⃣</span>Class 2</button><button onclick="selectClass('Class 3')"><span>3️⃣</span>Class 3</button>
+<button onclick="selectClass('Class 4')"><span>4️⃣</span>Class 4</button><button onclick="selectClass('Class 5')"><span>5️⃣</span>Class 5</button><button onclick="selectClass('Class 6')"><span>6️⃣</span>Class 6</button>
+<button onclick="selectClass('Class 7')"><span>7️⃣</span>Class 7</button><button onclick="selectClass('Class 8')"><span>8️⃣</span>Class 8</button><button onclick="selectClass('Class 9')"><span>9️⃣</span>Class 9</button>
+<button onclick="selectClass('Class 10')"><span>🔟</span>Class 10</button><button onclick="selectClass('Class 11')"><span>📖</span>Class 11</button><button onclick="selectClass('Class 12')"><span>🎓</span>Class 12</button>
+</div></div></section>
+</main>
+<footer class="footer"><div class="copyright">© 2026 SchoolKart. All Rights Reserved.</div></footer>
+<script src="js/app.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  const school=localStorage.getItem("selectedSchool");
+  if(!school){location.href="schools.html";return;}
+  document.getElementById("schoolName").textContent=school;
+  document.getElementById("selectedSchoolText").textContent="Shopping for "+school+". Select your child's class.";
+});
+</script>
+</body>
+</html>

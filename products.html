@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Products - SchoolKart</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="header"><div class="container nav"><a href="index.html" class="logo">🎒 SchoolKart</a><button class="menu-btn" onclick="toggleMenu()">☰</button><nav id="mainNav"><a href="index.html">Home</a><a href="schools.html">Schools</a><a href="products.html" class="active">Products</a><a href="cart.html">Cart <span class="cart-count">0</span></a><a href="login.html" class="login-link">Login</a></nav></div></header>
+<main>
+<section class="products-header"><div class="container">
+<div class="breadcrumb"><a href="schools.html">School</a><span>›</span><a href="classes.html">Class</a><span>›</span><strong>Products</strong></div>
+<span>SHOPPING FOR</span><h1 id="productHeading">School Products</h1><p id="productSubheading">Find everything your child needs.</p>
+</div></section>
+<section class="products-section section"><div class="container">
+<div class="product-top">
+<div class="category-tabs">
+<button class="category-btn active" onclick="filterProducts('All',this)">All</button><button class="category-btn" onclick="filterProducts('Books',this)">📚 Books</button><button class="category-btn" onclick="filterProducts('Notebooks',this)">📓 Notebooks</button><button class="category-btn" onclick="filterProducts('Uniform',this)">👕 Uniform</button><button class="category-btn" onclick="filterProducts('Bags',this)">🎒 Bags</button><button class="category-btn" onclick="filterProducts('Stationery',this)">✏️ Stationery</button><button class="category-btn" onclick="filterProducts('Shoes',this)">👟 Shoes</button>
+</div>
+<div class="product-search">🔍<input type="text" id="productSearch" placeholder="Search products..." onkeyup="searchProducts()"></div>
+</div>
+<div class="kit-banner"><div><span>🎁 SPECIAL OFFER</span><h2>Complete School Kit</h2><p>Get all essential products together and save time.</p></div><button onclick="addCompleteKit()">Add Complete Kit — ₹2,999</button></div>
+<div class="product-grid" id="productGrid"></div>
+<div id="noProducts" class="empty-state hidden"><div>🔎</div><h3>No products found</h3><p>Try another search or category.</p></div>
+</div></section>
+</main>
+<footer class="footer"><div class="copyright">© 2026 SchoolKart. All Rights Reserved.</div></footer>
+<script src="js/app.js"></script>
+</body>
+</html>
